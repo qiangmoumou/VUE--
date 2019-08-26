@@ -9,7 +9,7 @@ Vue.use(VueRouter)
 // 导入格式化时间的插件
 import moment from 'moment'
 // 定义全局的过滤器
-Vue.filter('dateFormat', function (dataStr, pattern="YYYY-MM-DD HH:mm:ss") {
+Vue.filter('dateFormat', (dataStr, pattern="YYYY-MM-DD HH:mm:ss") => {
     return moment(dataStr).format(pattern)
 })
 
@@ -39,6 +39,11 @@ import './lib/mui/css/icons-extra.css'
 import MintUi from 'mint-ui'
 Vue.use(MintUi)
 import 'mint-ui/lib/style.css'
+
+
+// 安装 图片预览插件
+import VuePreview from 'vue-preview'
+Vue.use(VuePreview)
 
 
 // 1.3 导入自定义的 router.js 路由模块
